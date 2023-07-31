@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: postgres-demo
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:postgresql://192.168.4.46:5432/7unit_big_base
+    username: postgres
+    password: AdminP@ss4Postgres
+    driver-class-name: org.postgresql.Driver
