@@ -9,6 +9,7 @@ import org.hibernate.annotations.TypeDef;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -30,7 +31,7 @@ public class DbData {
 
     @Type(type = "jsonb")
     @Column(name = "data", columnDefinition = "jsonb")
-    private List<DataRow> data;
+    private Map<String,Object> data;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "register_id")
